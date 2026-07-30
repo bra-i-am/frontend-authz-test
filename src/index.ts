@@ -1,1 +1,3 @@
-export const AUTHZ_VERSION = '0.1.0';
+export { usePermissions, permissionsQueryKeys } from './hooks';
+export type { UsePermissionsOptions, UsePermissionsResult } from './hooks';
+export type { PermissionValidationQuery, PermissionValidationAnswer } from './types';

@@ -10,6 +10,7 @@ config.parserOptions = {
 
 config.rules = {
   ...config.rules,
+  'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
   'import/extensions': ['error', 'ignorePackages', {
     js: 'never',
     jsx: 'never',
