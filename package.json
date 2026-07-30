@@ -1,0 +1,56 @@
+{
+  "name": "@openedx/frontend-authz",
+  "version": "1.0.0-semantically-released",
+  "description": "Permission-validation hooks and API client for integrating openedx-authz into Open edX MFEs",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openedx/frontend-authz.git"
+  },
+  "browserslist": [
+    "extends @edx/browserslist-config"
+  ],
+  "scripts": {
+    "build": "make build",
+    "lint": "fedx-scripts eslint --ext .js --ext .jsx --ext .ts --ext .tsx .",
+    "lint:fix": "npm run lint -- --fix",
+    "snapshot": "fedx-scripts jest --updateSnapshot",
+    "test": "fedx-scripts jest --coverage --passWithNoTests",
+    "test:watch": "npm run test -- --watch"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "author": "Open edX Community",
+  "license": "AGPL-3.0",
+  "homepage": "https://github.com/openedx/frontend-authz#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/openedx/frontend-authz/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@edx/browserslist-config": "^1.1.1",
+    "@edx/frontend-platform": "^8.3.0",
+    "@openedx/frontend-build": "^14.3.1",
+    "@tanstack/react-query": "^5.0.0",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^16.2.0",
+    "@types/jest": "^29.0.0",
+    "husky": "7.0.4",
+    "jest": "29.7.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "semantic-release": "^22.0.12"
+  },
+  "peerDependencies": {
+    "@edx/frontend-platform": "^7.0.0 || ^8.0.0",
+    "@tanstack/react-query": "^5.0.0",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
+  }
+}
